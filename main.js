@@ -31,5 +31,13 @@ function generate(){
 
     document.getElementById("lastNums").innerHTML += password + "<br />";
 
+}
+function copyPassword(){
+
+    document.getElementById("display").select();
+
+    document.execCommand("Copy");
+
+    alert("Password copied to clipboard!");
 
 }
