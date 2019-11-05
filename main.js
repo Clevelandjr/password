@@ -5,14 +5,13 @@ if(creatPassword){
 else{
     alert("This isn't the page for you.")
 }
-var characters = prompt("How many charcters?");
+var characters = prompt("How many characters?");
 if(characters > 7){
     alert("We can help you!")
 }
 else if(characters < 8){
     alert("We need at least 8 characters.")
 }
-
 
 function generate(){
 
@@ -23,13 +22,12 @@ function generate(){
     let password = "";
 
     
-    for(var i = 0; i <= complexity; i++){
+    for(let i = 0; i <= complexity; i++){
         password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length - 1)));
     }
     
     document.getElementById("display").value = password;
 
-    document.getElementById("lastNums").innerHTML += password + "<br />";
 
 }
 function copyPassword(){
