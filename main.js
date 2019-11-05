@@ -29,5 +29,7 @@ function generate(){
     
     document.getElementById("display").value = password;
 
+    document.getElementById("lastNums").innerHTML += password + "<br />";
+
 
 }
