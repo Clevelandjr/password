@@ -8,7 +8,7 @@ var numbers = "1234567890";
 
 
 //making the questions to ask the user
-var userChoice = prompt("How many characters will you like your password to be? Please provide range from 8-128.");
+var userChoice = prompt("How many characters would you like your password to be? Please provide number between 8-128.");
 
 if (userChoice >= 8 && userChoice <= 128) {
     var upper1 = confirm("Would you like upper case characters?");
