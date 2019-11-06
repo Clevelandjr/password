@@ -1,36 +1,60 @@
-.content{
+.navbar-brand {
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 30px;
+    width: 100%;
+  }
+.navbar-collapse {
+    text-align: center;
+    font-size: 40px;
+  }
+
+  h2{
+    text-align: left;
+    border-bottom: lightgray;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    padding: 20px;
+  }
+.content {
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: white!important;
-    padding:40px;
+    background-color: white;
+    padding: 20px;
     width: 100%;
-    border-style: dashed 3px blue;
-}
-#display{
-    width: 100%;
-    height: 100px;
-    border: dashed 3px lightgray;
-}
-#slider{
-    width: 100%;
-}
-h1{
+    height: 100%;
     text-align: center;
 }
-.container{
-    border-style: dashed 8px black;
+
+#display {
+    width: 100%;
+    height: 200px;
+    text-align: inherit;
+    border-style: dotted;
+    border-width: 3px;
 }
-.button-1{
+
+#generate{
     background-color: red;
+    float: left;
+    margin-left: 20px;
     color: white;
+    border-radius: 30px;
+    padding: 10px;
+    margin-top: 20px;
 }
-.button-2{
-    background-color: lightgray;
-    color: white;
+
+#copy{
+  background-color: silver;
+  float: right;
+  color: white;
+  margin-right: 20px;
+  border-radius: 30px;
+  padding: 10px;
+  margin-top: 20px;
 }
-body{
-   background-color: rgb(241, 238, 238);
-}
-h4{
-    border-bottom-style: solid;
+
+body {
+  background-color: lavenderblush;
 }

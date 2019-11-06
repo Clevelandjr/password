@@ -1,4 +1,4 @@
-//making our random variables
+//random variables
 var password = "";
 var lower = "abcdefghijklmnopqrstuvwxyz";
 var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
