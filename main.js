@@ -11,14 +11,14 @@ var numbers = "1234567890";
 var userChoice = prompt("How many characters will you like your password to be? Please provide range from 8-128.");
 
 if (userChoice >= 8 && userChoice <= 128) {
-    var upper1 = confirm("Would you like upper characters?");
+    var upper1 = confirm("Would you like upper case characters?");
     if (upper1 === true) {
         password += upper;
     }
     console.log(password)
 
 
-    var lower1 = confirm("Would you like lower characters?");
+    var lower1 = confirm("Would you like lower case characters?");
     if (lower1 === true) {
         password += lower;
     }
@@ -69,3 +69,4 @@ function copyPassword() {
     document.execCommand("Copy");
 
     alert("Password is copied to clipboard!!!");
+}
