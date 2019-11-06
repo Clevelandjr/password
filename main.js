@@ -1,41 +1,71 @@
-var creatPassword = confirm("Want to create a Password?");
-if(creatPassword){
-    alert("Great! You came to the right site!")
-}
-else{
-    alert("This isn't the page for you.")
-}
-var characters = prompt("How many characters?");
-if(characters > 7){
-    alert("We can help you!")
-}
-else if(characters < 8){
-    alert("We need at least 8 characters.")
-}
+//making our random variables
+var password = "";
+var lower = "abcdefghijklmnopqrstuvwxyz";
+var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var special = "!@#$%^&*()_+";
+var numbers = "1234567890";
 
-function generate(){
 
-    let complexity = document.getElementById("slider").value;
 
-    let values = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+";
+//making the questions to ask the user
+var userChoice = prompt("How many characters will you like your password to be? Please provide range from 8-128.");
 
-    let password = "";
-
-    
-    for(let i = 0; i <= complexity; i++){
-        password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length - 1)));
+if (userChoice >= 8 && userChoice <= 128) {
+    var upper1 = confirm("Would you like upper characters?");
+    if (upper1 === true) {
+        password += upper;
     }
-    
-    document.getElementById("display").value = password;
+    console.log(password)
 
+
+    var lower1 = confirm("Would you like lower characters?");
+    if (lower1 === true) {
+        password += lower;
+    }
+    console.log(password)
+
+
+    var special1 = confirm("Would you like special characters?");
+    if (special1 === true) {
+        password += special;
+    }
+    console.log(password)
+
+
+    var numbers1 = confirm("Would you like numbers?");
+    if (numbers1 === true) {
+        password += numbers;
+    }
+    console.log(password)
 
 }
-function copyPassword(){
+//refresh if they choose not to answer
+else {
+    confirm("Must be between 8-128!!!");
+    document.location.reload()
+}
+
+
+
+//loop
+function generate() {
+    
+    var final = "";
+    for ( i = 1; i <= userChoice; i++) {
+        final += password.charAt(Math.floor(Math.random() * Math.floor(password.length)))
+    }
+    //password to display area
+    console.log(final)
+
+    document.getElementById("display").value = final;
+}
+
+
+//alert that its copied
+function copyPassword() {
 
     document.getElementById("display").select();
 
     document.execCommand("Copy");
 
-    alert("Password copied to clipboard!");
-
-}
+    alert("Password is copied to clipboard!!!");
